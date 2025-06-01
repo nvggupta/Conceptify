@@ -17,8 +17,6 @@ export const createCourse = async (req,res) => {
             category,
             creator:req.id
         }); 
-        console.log(course);
-        console.log("Coures",course);
         return res.status(201).json({
             course,
             message:"Course created."

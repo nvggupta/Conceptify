@@ -11,18 +11,17 @@ import courseProgressRoute from "./routes/courseProgress.route.js";
 
 dotenv.config({});
 
-// call database connection here
+
 connectDB();
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-// default middleware
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:["http://localhost:5173","http://localhost:5174"],
+    origin:["http://localhost:5173","http://localhost:5174","https://conceptify-1.onrender.com"],
     credentials:true
 }));
  
